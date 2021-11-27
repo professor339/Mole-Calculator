@@ -1,0 +1,70 @@
+<h2><u>Sample Preparation Tool</u></h2>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<font color="red">Note: </font><font color="blue">Results for Mole will come in <font color="green">GRAMS</font><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Results for milli Mole will come in  <font color="green">MG</font><br><br></font>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+    
+</style>
+
+
+
+<form>
+Mole/ milli Mole: <input type="text" id="firstNumber" /><br>
+Quantity ( ml ): <input type="text" id="secondNumber" /><br>
+M.W. (Compound): <input type="text" id="thirdNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Submit" />
+
+</form>
+<p>Result (g/mg):
+<b><font color="blue">
+<span id ="result"></span> g/mg</b>
+</font>
+</p>
+
+<script>
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        num3 = document.getElementById("thirdNumber").value;
+        
+        document.getElementById("result").innerHTML = num1 * num2 * num3 * 0.001;
+}
+
+
+</script>
+
+<br><br>
+<center>
+<font color="red"> Created By: Abhishek Suna</font></center>
